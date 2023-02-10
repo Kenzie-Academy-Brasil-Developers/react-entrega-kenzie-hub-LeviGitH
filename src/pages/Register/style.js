@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const StyleLogin = styled.main`
+export const StyleRegister = styled.main`
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
 
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@ export const StyleLogin = styled.main`
 
   background-color: var(--grey-4);
 
-  .login__container {
+  .register__container {
     width: 90vw;
 
     display: flex;
@@ -19,6 +19,29 @@ export const StyleLogin = styled.main`
     align-items: center;
     gap: 17.65px;
 
+    header {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      button {
+        padding: 4.48px 25.77px;
+
+        background-color: var(--grey-3);
+        border: none;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 0.6rem;
+        color: var(--grey-0);
+      }
+      button:hover {
+        background-color: var(--grey-1);
+      }
+    }
     form {
       width: 100%;
       margin-top: 10px;
@@ -39,6 +62,12 @@ export const StyleLogin = styled.main`
         font-weight: 700;
         font-size: 1rem;
         color: var(--grey-0);
+      }
+      h2 {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 0.6rem;
+        color: var(--grey-1);
       }
       div {
         width: 90%;
@@ -71,39 +100,33 @@ export const StyleLogin = styled.main`
 
           color: var(--grey-0);
         }
-        a {
-          text-align: center;
-          text-decoration: none;
-          span {
-            text-align: center;
-            font-family: "Inter";
-            font-weight: 600;
-            font-size: 0.75rem;
-            color: var(--grey-1);
-          }
-        }
-        button {
-          width: 100%;
+        select {
+          height: 38.5px;
+          padding-left: 13.03px;
 
-          background-color: var(--grey-1);
-          border: 1.22px solid var(--grey-1);
-          border-radius: 4px;
+          background-color: var(--grey-2);
+          border: 0.98px solid transparent;
+          border-radius: 3.21px;
+          outline: none;
+
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 0.814rem;
+          color: var(--grey-1);
+        }
+        select:focus {
+          border: 0.98px solid var(--grey-0);
 
           color: var(--grey-0);
-
-          margin-bottom: 42px;
-        }
-        button:hover {
-          background-color: var(--grey-2);
-          border: 1.22px solid var(--grey-2);
         }
       }
       button {
         width: 90%;
         height: 38.5px;
+        margin-bottom: 42px;
 
-        background-color: var(--color-primary);
-        border: 1.22px solid var(--color-primary);
+        background-color: var(--color-primary-negative);
+        border: 1.22px solid var(--color-primary-negative);
         border-radius: 4px;
 
         cursor: pointer;
@@ -113,27 +136,31 @@ export const StyleLogin = styled.main`
         font-size: 0.802rem;
         color: var(--white-neutral);
       }
-      button:hover {
-        background-color: var(--color-primary-focus);
-        border: 1.22px solid var(--color-primary-focus);
-      }
     }
   }
   @media (min-width: 480px) {
-    .login__container {
+    .register__container {
       width: 70vw;
     }
   }
   @media (min-width: 768px) {
-    .login__container {
+    .register__container {
       width: 50vw;
-      img {
-        width: 120px;
+      header {
+        img {
+          width: 120px;
+        }
+        button {
+          font-size: 0.8rem;
+        }
       }
       form {
         margin-top: 15px;
         h1 {
           font-size: 1.1rem;
+        }
+        h2 {
+          font-size: 0.75rem;
         }
         div {
           label {
@@ -141,11 +168,6 @@ export const StyleLogin = styled.main`
           }
           input {
             font-size: 0.906rem;
-          }
-          a {
-            span {
-              font-size: 0.7.8rem;
-            }
           }
         }
         button {
@@ -155,10 +177,12 @@ export const StyleLogin = styled.main`
     }
   }
   @media (min-width: 1024px) {
-    .login__container {
+    .register__container {
       width: 30vw;
-      img {
-        width: 140px;
+      header {
+        img {
+          width: 140px;
+        }
       }
       form {
         margin-top: 20px;

@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
+import { StyleRegister } from "./style";
 
 export const Register = () => {
   return (
-    <main>
-      <div>
+    <StyleRegister>
+      <div className="register__container">
         <header>
           <img src={Logo} alt="Kenzie Hub Logo" />
-          <button>Voltar</button>
+          <Link to="/login">
+            <button>Voltar</button>
+          </Link>
         </header>
         <form>
           <h1>Crie sua conta</h1>
@@ -46,6 +50,6 @@ export const Register = () => {
           <button>Cadastrar</button>
         </form>
       </div>
-    </main>
+    </StyleRegister>
   );
 };
