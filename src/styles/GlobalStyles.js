@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
         --success: #3FE864;
         --negative: #E83F5B;
-        -white-neutral: #FFFFFF;
+        --white-neutral: #FFFFFF;
 
         --inter-font: font-family: 'Inter', sans-serif;
     }

@@ -5,17 +5,17 @@ import { StyleLogin } from "./style";
 export const Login = () => {
   return (
     <StyleLogin>
-      <div>
+      <div className="login__container">
         <img src={Logo} alt="Kenzie Hub Logo" />
         <form>
           <h1>Login</h1>
           <div>
-            <label htmlFor=""></label>
-            <input type="email" />
+            <label>Email</label>
+            <input type="email" placeholder="Digite aqui seu email" />
           </div>
           <div>
-            <label htmlFor=""></label>
-            <input type="password" />
+            <label>Senha</label>
+            <input type="password" placeholder="Digite aqui sua senha" />
           </div>
           <button>Entrar</button>
           <div>
