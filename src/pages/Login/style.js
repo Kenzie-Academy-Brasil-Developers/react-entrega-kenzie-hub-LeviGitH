@@ -71,16 +71,16 @@ export const StyleLogin = styled.main`
 
           color: var(--grey-0);
         }
+        span {
+          text-align: center;
+          font-family: "Inter";
+          font-weight: 600;
+          font-size: 0.75rem;
+          color: var(--grey-1);
+        }
         a {
           text-align: center;
           text-decoration: none;
-          span {
-            text-align: center;
-            font-family: "Inter";
-            font-weight: 600;
-            font-size: 0.75rem;
-            color: var(--grey-1);
-          }
         }
         button {
           width: 100%;
@@ -142,10 +142,8 @@ export const StyleLogin = styled.main`
           input {
             font-size: 0.906rem;
           }
-          a {
-            span {
-              font-size: 0.7.8rem;
-            }
+          span {
+            font-size: 0.7.8rem;
           }
         }
         button {
