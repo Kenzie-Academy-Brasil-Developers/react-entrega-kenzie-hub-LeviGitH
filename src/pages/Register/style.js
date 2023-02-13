@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyleRegister = styled.main`
   width: 100vw;
-  height: 130vh;
+  padding: 50px 0;
 
   display: flex;
   flex-direction: column;
@@ -81,6 +81,12 @@ export const StyleRegister = styled.main`
           font-size: 0.7rem;
           color: var(--grey-0);
         }
+        p {
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 0.7rem;
+          color: var(--grey-1);
+        }
         input {
           height: 38.5px;
           padding-left: 13.03px;
@@ -125,8 +131,8 @@ export const StyleRegister = styled.main`
         height: 38.5px;
         margin-bottom: 42px;
 
-        background-color: var(--color-primary-negative);
-        border: 1.22px solid var(--color-primary-negative);
+        background-color: var(--color-primary);
+        border: 1.22px solid var(--color-primary);
         border-radius: 4px;
 
         cursor: pointer;
@@ -135,6 +141,10 @@ export const StyleRegister = styled.main`
         font-weight: 500;
         font-size: 0.802rem;
         color: var(--white-neutral);
+      }
+      button:hover {
+        background-color: var(--color-primary-focus);
+        border: 1.22px solid var(--color-primary-focus);
       }
     }
   }
@@ -164,6 +174,9 @@ export const StyleRegister = styled.main`
         }
         div {
           label {
+            font-size: 0.8rem;
+          }
+          p {
             font-size: 0.8rem;
           }
           input {

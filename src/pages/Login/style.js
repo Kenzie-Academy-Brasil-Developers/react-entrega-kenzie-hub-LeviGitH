@@ -52,6 +52,12 @@ export const StyleLogin = styled.main`
           font-size: 0.7rem;
           color: var(--grey-0);
         }
+        p {
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 0.7rem;
+          color: var(--grey-1);
+        }
         input {
           height: 38.5px;
           padding-left: 13.03px;
@@ -137,6 +143,9 @@ export const StyleLogin = styled.main`
         }
         div {
           label {
+            font-size: 0.8rem;
+          }
+          p {
             font-size: 0.8rem;
           }
           input {
