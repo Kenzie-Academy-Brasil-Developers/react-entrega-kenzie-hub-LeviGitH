@@ -19,39 +19,9 @@ export const GlobalStyle = createGlobalStyle`
 
         --success: #3FE864;
         --negative: #E83F5B;
-        -white-neutral: #FFFFFF;
+        --white-neutral: #FFFFFF;
 
         --inter-font: font-family: 'Inter', sans-serif;
-    }
-    .title1{
-        font-family: var(--inter-font);
-        font-weight: bold;
-        font-size: 1rem;
-    }
-    .title2{
-        font-family: var(--inter-font)
-        font-weight: bold;
-        font-size: 1rem;
-    }
-    .title3{
-        font-family: var(--inter-font)
-        font-weight: bold;
-        font-size: 1rem;
-    }
-    .headline{
-        font-family: var(--inter-font)
-        font-weight: normal;
-        font-size: 0.75rem;
-    }
-    .headlineBold{
-        font-family: var(--inter-font)
-        font-weight: bold;
-        font-size: 0.75rem;
-    }
-    .headlineItalic{
-        font-family: var(--inter-font)
-        font-weight: bold;
-        font-size: 0.75rem;
     }
 
     html, body, div, span, applet, object, iframe,
