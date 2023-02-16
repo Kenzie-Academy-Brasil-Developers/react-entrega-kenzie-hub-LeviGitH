@@ -56,6 +56,17 @@ export const StyleHome = styled.main`
       color: var(--grey-1);
     }
   }
+  .content__container {
+    width: 90vw;
+
+    .content__header {
+      display: flex;
+      background-color: red;
+    }
+    .content__main {
+      background-color: blue;
+    }
+  }
   @media (min-width: 768px) {
     header {
       h1 {
