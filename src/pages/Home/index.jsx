@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 
 import { Header } from "../../components/Header";
 import { ModalCreateTech } from "../../components/ModalCreateTech";
+import { ModalUpdateTech } from "../../components/ModalUpdateTech";
 
 export const Home = () => {
   const [user, setUser] = useState({ name: "", module: "", techs: [] });
+  const [tech, setTech] = useState("");
   const [modalOn, setModalOn] = useState({ add: "", update: "" });
   const navigate = useNavigate();
   const token = localStorage.getItem("@TOKEN");
@@ -48,6 +50,15 @@ export const Home = () => {
           loadUser={loadUser}
         />
       ) : null}
+      {modalOn.update === "working" ? (
+        <ModalUpdateTech
+          setModalOn={setModalOn}
+          modalOn={modalOn}
+          tech={tech}
+          token={token}
+          loadUser={loadUser}
+        />
+      ) : null}
       <StyleHome>
         <nav>
           <img src={Logo} alt="Kenzie Hub Logo" />
@@ -76,7 +87,13 @@ export const Home = () => {
             <div className="content__main">
               {user.techs.map((element, index) => {
                 return (
-                  <button key={index}>
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setModalOn({ ...modalOn, update: "working" });
+                      setTech(element);
+                    }}
+                  >
                     <h1>{element.title}</h1>
                     <h2>{element.status}</h2>
                   </button>

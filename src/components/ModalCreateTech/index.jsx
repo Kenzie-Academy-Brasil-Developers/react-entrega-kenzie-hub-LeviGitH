@@ -1,8 +1,11 @@
 import ButtonModal from "../../assets/Button Modal.svg";
-import { StyleModalCreateTech } from "./style";
+import { StyleModalHome } from "./style";
+
 import { useForm } from "react-hook-form";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+
 import { api } from "../../services/api";
 
 export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
@@ -32,7 +35,7 @@ export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
   };
 
   return (
-    <StyleModalCreateTech open>
+    <StyleModalHome open>
       <div className="modal__container">
         <div className="modal__header">
           <h1>Cadastrar Tecnologia</h1>
@@ -68,6 +71,6 @@ export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
           <button type="submit">Cadastrar Tecnologia</button>
         </form>
       </div>
-    </StyleModalCreateTech>
+    </StyleModalHome>
   );
 };

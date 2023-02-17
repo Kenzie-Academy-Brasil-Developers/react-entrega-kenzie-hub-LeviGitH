@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyleHome = styled.main`
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   padding-bottom: 50px;
 
   display: flex;

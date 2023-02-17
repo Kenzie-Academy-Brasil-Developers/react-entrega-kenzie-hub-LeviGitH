@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleModalCreateTech = styled.dialog`
+export const StyleModalHome = styled.dialog`
   width: 100%;
   height: 100%;
   border: 0;
@@ -102,6 +102,19 @@ export const StyleModalCreateTech = styled.dialog`
       }
       button:hover {
         background-color: var(--color-primary-focus);
+      }
+      .modal__button--update {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        #button__delete {
+          width: 40%;
+
+          background-color: var(--grey-1);
+        }
+        #button__delete:hover {
+          background-color: var(--grey-2);
+        }
       }
     }
   }
