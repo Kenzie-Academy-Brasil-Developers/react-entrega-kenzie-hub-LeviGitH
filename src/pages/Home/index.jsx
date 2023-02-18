@@ -2,19 +2,18 @@ import Logo from "../../assets/Logo.svg";
 import ButtonPlus from "../../assets/Button Plus.svg";
 import { StyleHome } from "./style";
 import { api } from "../../services/api";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 import { Header } from "../../components/Header";
-import { ModalCreateTech } from "../../components/ModalCreateTech";
-import { ModalUpdateTech } from "../../components/ModalUpdateTech";
+import { ModalCreateTech } from "../../components/Modal(2)/ModalCreateTech";
+import { ModalUpdateTech } from "../../components/Modal(2)/ModalUpdateTech";
+import { CardTech } from "../../components/CardTech";
+import { UserContext } from "../../providers/UserContext";
+import { TechContext } from "../../providers/TechContext";
 
 export const Home = () => {
-  const [user, setUser] = useState({ name: "", module: "", techs: [] });
-  const [tech, setTech] = useState("");
-  const [modalOn, setModalOn] = useState({ add: "", update: "" });
-  const navigate = useNavigate();
-  const token = localStorage.getItem("@TOKEN");
+  const { user, setUser, tech, setTech } = useContext(UserContext);
+  const { modalOn, setModalOn, navigate, token } = useContext(TechContext);
 
   async function loadUser() {
     try {
@@ -87,16 +86,13 @@ export const Home = () => {
             <div className="content__main">
               {user.techs.map((element, index) => {
                 return (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setModalOn({ ...modalOn, update: "working" });
-                      setTech(element);
-                    }}
-                  >
-                    <h1>{element.title}</h1>
-                    <h2>{element.status}</h2>
-                  </button>
+                  <CardTech
+                    index={index}
+                    setModalOn={setModalOn}
+                    modalOn={modalOn}
+                    setTech={setTech}
+                    element={element}
+                  />
                 );
               })}
             </div>

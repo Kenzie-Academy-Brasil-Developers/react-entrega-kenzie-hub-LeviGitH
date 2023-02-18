@@ -1,27 +1,27 @@
-import ButtonModal from "../../assets/Button Modal.svg";
-import { StyleModalHome } from "./style";
+import ButtonModal from "../../../assets/Button Modal.svg";
+import { StyleModal } from "../style";
 
 import { useForm } from "react-hook-form";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { api } from "../../services/api";
+import { api } from "../../../services/api";
+
+const schema = yup
+  .object({
+    title: yup.string().required("Nome é obrigatório!"),
+  })
+  .required();
 
 export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
-  const schema = yup
-    .object({
-      title: yup.string().required("Nome é obrigatório!"),
-    })
-    .required();
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const createTech = async (data) => {
+  const onSubmit = async (data) => {
     const headers = {
       Authorization: `Bearer ${token}`,
     };
@@ -35,7 +35,7 @@ export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
   };
 
   return (
-    <StyleModalHome open>
+    <StyleModal open>
       <div className="modal__container">
         <div className="modal__header">
           <h1>Cadastrar Tecnologia</h1>
@@ -47,7 +47,7 @@ export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
             <img src={ButtonModal} />
           </button>
         </div>
-        <form className="modal__main" onSubmit={handleSubmit(createTech)}>
+        <form className="modal__main" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label>Nome</label>
             <input
@@ -71,6 +71,6 @@ export const ModalCreateTech = ({ setModalOn, modalOn, token, loadUser }) => {
           <button type="submit">Cadastrar Tecnologia</button>
         </form>
       </div>
-    </StyleModalHome>
+    </StyleModal>
   );
 };

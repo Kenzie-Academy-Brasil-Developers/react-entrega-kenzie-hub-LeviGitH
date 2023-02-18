@@ -1,9 +1,7 @@
-import ButtonModal from "../../assets/Button Modal.svg";
-import { StyleModalHome } from "../ModalCreateTech/style";
-
+import ButtonModal from "../../../assets/Button Modal.svg";
+import { StyleModal } from "../style";
 import { useForm } from "react-hook-form";
-
-import { api } from "../../services/api";
+import { api } from "../../../services/api";
 
 export const ModalUpdateTech = ({
   setModalOn,
@@ -43,7 +41,7 @@ export const ModalUpdateTech = ({
   }
 
   return (
-    <StyleModalHome open>
+    <StyleModal open>
       <div className="modal__container">
         <div className="modal__header">
           <h1>Tecnologia Detalhes</h1>
@@ -85,6 +83,6 @@ export const ModalUpdateTech = ({
           </div>
         </form>
       </div>
-    </StyleModalHome>
+    </StyleModal>
   );
 };

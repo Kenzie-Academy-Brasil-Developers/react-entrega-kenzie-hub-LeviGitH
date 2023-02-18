@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleModalHome = styled.dialog`
+export const StyleModal = styled.dialog`
   width: 100%;
   height: 100%;
   border: 0;
