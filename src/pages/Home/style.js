@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const StyleHome = styled.main`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 50px;
 
   display: flex;
   flex-direction: column;
@@ -54,6 +55,80 @@ export const StyleHome = styled.main`
       font-weight: 600;
       font-size: 0.75rem;
       color: var(--grey-1);
+    }
+  }
+  .content__container {
+    margin-top: 25px;
+    width: 90vw;
+
+    .content__header {
+      margin-bottom: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 17px;
+        color: var(--grey-0);
+      }
+      button {
+        width: 100%;
+        max-width: 34px;
+        padding: 6px 0;
+
+        background-color: var(--grey-3);
+        border: none;
+        border-radius: 4px;
+
+        cursor: pointer;
+      }
+    }
+    .content__main {
+      height: 100%;
+      max-height: 416px;
+      padding: 20px 0;
+      overflow-y: auto;
+
+      background-color: var(--grey-3);
+      border-radius: 4px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      button {
+        width: 90%;
+        height: 100%;
+        min-height: 49px;
+        padding: 5px 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--grey-4);
+        border: none;
+        border-radius: 4px;
+
+        cursor: pointer;
+        h1 {
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 1rem;
+          color: var(--grey-0);
+        }
+        h2 {
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 0.75rem;
+          color: var(--grey-1);
+        }
+      }
+      button:hover {
+        background-color: var(--grey-2);
+      }
     }
   }
   @media (min-width: 768px) {
