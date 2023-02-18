@@ -64,7 +64,7 @@ export const Home = () => {
           <button
             onClick={() => {
               localStorage.clear();
-              document.location.reload(true);
+              navigate("/login");
             }}
           >
             Sair
