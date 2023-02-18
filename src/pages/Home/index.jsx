@@ -33,7 +33,7 @@ export const Home = () => {
 
   useEffect(() => {
     if (token === null) {
-      navigate("/login");
+      navigate("/");
     } else {
       loadUser();
     }
