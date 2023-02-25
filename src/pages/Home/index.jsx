@@ -10,10 +10,12 @@ import { ModalUpdateTech } from "../../components/Modal(2)/ModalUpdateTech";
 import { CardTech } from "../../components/CardTech";
 import { UserContext } from "../../providers/UserContext";
 import { TechContext } from "../../providers/TechContext";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const { user, setUser, tech, setTech } = useContext(UserContext);
-  const { modalOn, setModalOn, navigate, token } = useContext(TechContext);
+  const { modalOn, setModalOn, token } = useContext(TechContext);
+  const navigate = useNavigate();
 
   async function loadUser() {
     try {
@@ -35,6 +37,7 @@ export const Home = () => {
     if (token === null) {
       navigate("/login");
     } else {
+      console.log("cagou");
       loadUser();
     }
   }, []);
