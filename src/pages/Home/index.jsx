@@ -37,7 +37,6 @@ export const Home = () => {
     if (token === null) {
       navigate("/login");
     } else {
-      console.log("cagou");
       loadUser();
     }
   }, []);
