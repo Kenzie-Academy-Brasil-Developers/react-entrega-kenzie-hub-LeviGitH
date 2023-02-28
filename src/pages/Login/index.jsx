@@ -5,12 +5,18 @@ import { StyleLogin } from "./style";
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FormDataLoginContext } from "../../providers/FormDataContext/FormDataLoginContext";
 
 export const Login = () => {
-  const { register, handleSubmit, errors, onSubmit } =
+  const { register, handleSubmit, errors, onSubmit, token, navigate } =
     useContext(FormDataLoginContext);
+
+  useEffect(() => {
+    if (token !== undefined) {
+      navigate("/home");
+    }
+  });
 
   return (
     <StyleLogin>

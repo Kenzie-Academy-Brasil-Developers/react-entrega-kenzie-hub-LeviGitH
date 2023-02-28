@@ -31,7 +31,7 @@ export const FormDataLoginProvider = ({ children }) => {
 
   return (
     <FormDataLoginContext.Provider
-      value={{ register, handleSubmit, errors, onSubmit }}
+      value={{ register, handleSubmit, errors, onSubmit, navigate }}
     >
       {children}
     </FormDataLoginContext.Provider>
