@@ -12,6 +12,7 @@ export const Login = () => {
   const { register, handleSubmit, errors, onSubmit, token, navigate } =
     useContext(FormDataLoginContext);
 
+  // /PROFILE
   useEffect(() => {
     if (token !== undefined) {
       navigate("/home");
